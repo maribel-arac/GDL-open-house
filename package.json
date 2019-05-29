@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://mariabp.github.io/GDL-open-house",
   "dependencies": {
+    "firebase": "^6.1.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
