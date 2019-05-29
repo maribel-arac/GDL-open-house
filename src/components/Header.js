@@ -8,11 +8,9 @@ class Header extends Component {
 
 			<div className="header">
 				<nav className="navbar">
-					<a className="navbar-brand" >
-					<img className="logo" src="../images/logo.png" />
-					<span className="badge badge-pill badge-light ml-2">
-					</span>
-					</a>
+					<div className="navbar-brand">
+						<img className="logo" src={require("../images/logo.png" )}/>
+					</div>
 				</nav>
 
 			</div>
