@@ -9,7 +9,7 @@ class Header extends Component {
 			<div className="header">
 				<nav className="navbar">
 					<div className="navbar-brand">
-						<img className="logo" src={require("../images/logo.png" )}/>
+						<img className="logo img-fluid" src={require("../images/logo.png" )}/>
 					</div>
 				</nav>
 
