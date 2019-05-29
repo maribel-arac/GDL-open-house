@@ -1,21 +1,34 @@
-# Open House
+# Organa
 
-![Área de trabajo e invitación a Open House](https://lh4.googleusercontent.com/eRgzC3S6emgYkLpF46d6vzx4-BRqY2QP9XjqLzsaVJZFVC80Y7oMFRuagUWw5gL5XO9SgRIwsRgLBJNFjupgi3iHFRcyybKlBq51OgSX=s1600)
+![leia-organa](https://cdn3.movieweb.com/i/article/O0m8u4sbGThx14jjeuuDUsegz6cXhJ/798:50/Star-Wars-8-Princess-Leia-Carrie-Fisher-Scenes.jpg)
+
+En Laboratoria estamos buscando una manera eficiente de enterarnos quienes asistieron al área de trabajo cada día. Hasta ahora se ha llevado una asistencia manual pero sabemos que toma tiempo valioso.
+
+La idea de este proyecto es solucionar el registro de asistencia con una aplicación web.
+
+La solución que proponemos consiste en usar una webcam para leer [códigos QR](https://es.wikipedia.org/wiki/C%C3%B3digo_QR) que indetifiquen a cada estudiante que va llegando y se almacene en una base de datos por día.
+
+Como primera iteración consideramos que pueda guardar la asistencia y pueda mostrar en una interface cuántas estudiantes asistieron ese día y cuantas inasistencias hubieron.
+
+El listado de estudiantes puede ser indicado desde un JSON o haciendo un fetch a `https://laboratoria-la.firebaseapp.com/cohorts/gdl-2019-01-bc-core-gdl-002/users`.
+
+## UI
+
+Compartimos un prototipo de alta fidelidad que se usó en otra oportunidad, usarlo como referencia:
+
+![prototipo-beta](https://raw.githubusercontent.com/juanjordan/organa-oh/master/prototipo.png)
 
 
-# Objetivos
-## Empresas 
-* Conocer el trabajo y habilidades de las actuales estudiantes de Laboratoria. 
+## Flujo con los Códigos QR
 
-*  Identificar en ellas talento para sus equipos de trabajo. 
+Se espera que cada estudiante tenga un código QR que tiene un identificador de ellas como por ejemplo su correo electrónico, al llegar al área de trabajo cada estudiante mostrará su código QR a la webcam de una laptop y esta laptop registrará la asistencia de ella para ese día.
 
-## Estudiantes
-*  En el marco de 1 reto a trabajar durante 2 días  (ej, pre-admisión) mostrar sus talentos técnicos y habilidades profesionales. 
+## Recomendaciones
 
-* Equipos de 4 estudiantes a formarse libremente a más tardar el martes 28 de mayo. 
+- Si planeamos usar React podemos usar estos 2 libraries para el manejo de QRs: https://www.npmjs.com/package/react-qr-scanner y https://www.npmjs.com/package/react-qr-svg
+- Usar Firebase para la persistencia de la data.
+- Usar herramientas online para la creación de QRs de prueba (si lo consideran necesario) ej: https://www.the-qrcode-generator.com/
 
-* 4 retos, 1 a elegir libremente el día martes 28 de mayo. Los encontraran en éste repositorio
+## ¿Por qué el nombre Organa?
 
-* Recibir mentoría y feedback de representantes de empresas que permitan validar el desarrollo de habilidades y competencias para el trabajo. 
-
-* Establecer relaciones cercanas con empresas contratantes y aliadas de Laboratoria. 
+Leia Organa es la general de la resistencia en el universo de Star Wars, nos gusta pensar que está muy pendiente de los intergrantes de su equipo!
