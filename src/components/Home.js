@@ -8,10 +8,7 @@ class Home extends Component {
 
 			<div className="container">
 
-				{/* <WelcomeUser />
-				<SearchBar />
-				<DisplayDate />
-				<MenuBtn /> */}
+
 
 			</div>
 
