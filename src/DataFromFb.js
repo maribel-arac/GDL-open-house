@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './App.css';
 import firebase from './firebase/start-firebase';
 
@@ -10,7 +10,6 @@ export class DataFromFb extends Component {
 			students: []
 		};
 	}
-
 
 	componentDidMount() {
 
