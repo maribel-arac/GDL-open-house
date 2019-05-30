@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ShowAttendance.css'
 
 class ShowAttendance extends Component {
 
@@ -6,7 +7,7 @@ class ShowAttendance extends Component {
 
 		return (
 
-			<div className="show-attendance"></div>
+			<div className="show-attendance">Hoy llegaron <p> 48 de 50 </p> estudiantes</div>
 
 		);
 

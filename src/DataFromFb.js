@@ -41,9 +41,6 @@ export class DataFromFb extends Component {
 
 	}
 
-
-
-
 }
 
 export default DataFromFb;

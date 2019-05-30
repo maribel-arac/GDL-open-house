@@ -11,7 +11,7 @@
 
 			return (
 
-				<div className="container" >
+				<div className=" display-qr-scan container" >
 
 					<div className="row">
 
