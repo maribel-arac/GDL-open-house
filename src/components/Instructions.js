@@ -6,7 +6,7 @@ class Instructions extends Component {
 
         return (
 
-            <div className="instructions"></div>
+            <div className="instructions">Acerca tu código QR</div>
 
         );
 
