@@ -25,6 +25,7 @@ class Header extends Component {
 
 						<div className="col-sm-2">
 						<ul class="nav-menu">
+									<li> <NavLink className="nav-menu__link" to="/signIn">Sign In</NavLink></li>
 		                         	<li> <NavLink className="nav-menu__link" exact to="/">Inicio</NavLink></li>
 		                        	<li> <NavLink className="nav-menu__link" to="/scanner">Asistencia</NavLink></li>
 		                        	<li> <NavLink className="nav-menu__link" to="/history">Historial</NavLink></li>
