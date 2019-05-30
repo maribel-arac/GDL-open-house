@@ -5,24 +5,28 @@ import Header from './components/Header';
 import Home from './components/Home';
 import DisplayQrScan from './components/DisplayQrScan';
 import './App.css';
+import History from './components/History';
 
 function App() {
 	console.log(DataFromFb);
 	return (
+
 
 		<BrowserRouter>
 
 		<div className="App">
 
 			<Header name="Organa"/ >
-			<Route path="/" render = {()=> <Home />} />
-			<Route path="/display-qr-scan" component={DisplayQrScan} />
-
+			<Route exact path="/" render = {()=> <Home />} />
+			<Route exact path="/scanner" render = {()=> <DisplayQrScan />} />
+			<Route path="/history" render = {()=> <History />} />
 
 		</div>
 
 		</BrowserRouter>
+
 	);
 }
 
 export default App;
+
