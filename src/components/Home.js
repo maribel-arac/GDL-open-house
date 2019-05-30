@@ -1,21 +1,28 @@
-import React, { Component } from 'react';
+	import React, { Component } from 'react';
+	import ShowAttendance from './ShowAttendance';
+	import ShowStats from './ShowStats';
 
-class Home extends Component {
+	class Home extends Component {
 
-	render () {
+		render () {
 
-		return (
+			return (
 
-			<div className="container">
+				<div className="container" >
+					<div className="row">
+						<div className="col-3">
+							<ShowAttendance />
+						</div>
+						<div className="col-6">
+							<ShowStats />
+						</div>
+					</div>
+				</div>
 
+			);
 
-
-			</div>
-
-		)
+		}
 
 	}
 
-}
-
-export default Home;
+	export default Home;
