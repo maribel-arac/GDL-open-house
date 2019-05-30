@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ShowDate from './ShowDate'
+import ShowDate from './ShowDate';
+import {NavLink} from 'react-router-dom';
+
 
 class Header extends Component {
 
@@ -22,21 +24,14 @@ class Header extends Component {
 						</div>
 
 						<div className="col-sm-2">
-
-							<div className="nav-item dropdown">
-								<a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<i className="fas fa-bars"></i>
-								</a>
-
-								<div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-									<a className="dropdown-item" href="#">Inicio</a>
-									<a className="dropdown-item" href="#">Toma de Asistencia</a>
-									<a className="dropdown-item" href="#">Historial</a>
-								</div>
-
-							</div>
-
+						<ul class="nav-menu">
+		                         	<li> <NavLink className="nav-menu__link" exact to="/">Inicio</NavLink></li>
+		                        	<li> <NavLink className="nav-menu__link" to="/scanner">Asistencia</NavLink></li>
+		                        	<li> <NavLink className="nav-menu__link" to="/history">Historial</NavLink></li>
+		                        </ul>
 						</div>
+
+
 
 					</nav>
 				</div>
