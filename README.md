@@ -40,19 +40,20 @@ En cada caso se registra diferente información:
 
 ### Prototipo de baja fidelidad
 
-[Primera iteración](./images/first-ite.png)
-[Segunda iteración I](./images/second-ite.png)
-[Segunda iteración II](.images/second-iter.png)
+[Primera iteración](../images/first-ite.png)
+[Segunda iteración I](../images/second-ite.png)
+[Segunda iteración II](..images/second-iter.png)
 
 
 
 ### Prototipo de alta fidelidad 
 
 En el siguiente enlace, se puede encontrar el diseño de *Organa*.
+
 [Figma prototipo](https://www.figma.com/proto/O5AtKvib1waYHbzyH6CwygEt/Organa?node-id=6:514&viewport=-999,64,0.26451224088668823&scaling=scale-down)
 
 ### Componentes 
 Después de conocer las instancias que contendría la webapp, se hizó una lista de los componentes necesarios.
-[Componentes general](./images/components-general.png)
-[Lista de componentes](./images/components-list.png)
-[Árbol de componentes](./images/components-tree.png)
+- [Componentes general](../images/components-general.png)
+- [Lista de componentes](../images/components-list.png)
+- [Árbol de componentes](../images/components-tree.png)
