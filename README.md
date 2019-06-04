@@ -40,9 +40,9 @@ En cada caso se registra diferente información:
 
 ### Prototipo de baja fidelidad
 
-[Primera iteración](../images/first-ite.png)
-[Segunda iteración I](../images/second-ite.png)
-[Segunda iteración II](..images/second-iter.png)
+[Primera iteración](.src/images/first-ite.png)
+[Segunda iteración I](.src/images/second-ite.png)
+[Segunda iteración II](.src/images/second-iter.png)
 
 
 
@@ -54,6 +54,6 @@ En el siguiente enlace, se puede encontrar el diseño de *Organa*.
 
 ### Componentes 
 Después de conocer las instancias que contendría la webapp, se hizó una lista de los componentes necesarios.
-- [Componentes general](../images/components-general.png)
-- [Lista de componentes](../images/components-list.png)
-- [Árbol de componentes](../images/components-tree.png)
+- [Componentes general](.src/images/components-general.png)
+- [Lista de componentes](.src/images/components-list.png)
+- [Árbol de componentes](.src/images/components-tree.png)
