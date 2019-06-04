@@ -1,34 +1,58 @@
 # Organa
 
-![leia-organa](https://cdn3.movieweb.com/i/article/O0m8u4sbGThx14jjeuuDUsegz6cXhJ/798:50/Star-Wars-8-Princess-Leia-Carrie-Fisher-Scenes.jpg)
-
-En Laboratoria estamos buscando una manera eficiente de enterarnos quienes asistieron al área de trabajo cada día. Hasta ahora se ha llevado una asistencia manual pero sabemos que toma tiempo valioso.
+Laboratoria está buscando una manera eficiente de enterarse quienes asistieron al área de trabajo cada día. Hasta ahora se ha llevado una asistencia manual pero sabemos que toma tiempo valioso.
 
 La idea de este proyecto es solucionar el registro de asistencia con una aplicación web.
 
-La solución que proponemos consiste en usar una webcam para leer [códigos QR](https://es.wikipedia.org/wiki/C%C3%B3digo_QR) que indetifiquen a cada estudiante que va llegando y se almacene en una base de datos por día.
+La solución que proponemos consiste en usar una webcam para leer  [códigos QR](https://es.wikipedia.org/wiki/C%C3%B3digo_QR)  que identifiquen a cada estudiante que va llegando y se almacene en una base de datos por día.
 
 Como primera iteración consideramos que pueda guardar la asistencia y pueda mostrar en una interface cuántas estudiantes asistieron ese día y cuantas inasistencias hubieron.
 
-El listado de estudiantes puede ser indicado desde un JSON o haciendo un fetch a `https://laboratoria-la.firebaseapp.com/cohorts/gdl-2019-01-bc-core-gdl-002/users`.
+## Registro de asistencia, tardanza y falta
 
-## UI
+La coordinadora de desarrollo personal de Laboratoria lleva manualmente el registro de la asistencia de cada alumna en un archivo de una hoja de excel que va marcando con alguna de las siguientes 5 opciones:
 
-Compartimos un prototipo de alta fidelidad que se usó en otra oportunidad, usarlo como referencia:
+ - X= *asistencia* 
+ - T= *tardanza* 
+ - F= *falta* 
+ - TJ= *tardanza justificada* 
+ - FJ= *falta justificada*
 
-![prototipo-beta](https://raw.githubusercontent.com/juanjordan/organa-oh/master/prototipo.png)
+El horario para que se tome como retardo comienza a las 8:11am, en caso de falta es a partir de las 12pm. Dentro del archivo hay fórmulas que por día muestran el **TOTAL** de: cuantas estudiantes tienen asistencia, tardanza, etc.
+
+Cuando son *faltas sin justificar* se marcan en amarillo. Las tardanzas justificadas son cuando la alumna tiene tardanza pero la razón no es justificable (levantarse tarde por ejemplo) y en este caso se pone tardanza pero no ‘aplica’.
+
+La coordinadora de desarrollo personal cuenta con la información de cada alumna: nombre, correo, código de alumna y la asistencia. 
+
+El documento donde se lleva el control de  las asistencias -también se encuentran los coaches- y al registrar las faltas y tardanzas justificadas, cuando ella no está en el área de trabajo, aparece quien de los coaches incluyó el comentario de la falta y/o tardanza.
+
+## ¿Que se registra en las tardanzas y faltas?
+
+En cada caso se registra diferente información:
+
+-   Tardanza Justificada: la hora que llegó, a quién aviso y el motivo.
+-   Tardanza Injustificada: la alumna llegó tarde y no aviso.
+-   Falta: la estudiante no avisó a nadie y en este caso, se debe checar para hablarlo con ella.
 
 
-## Flujo con los Códigos QR
+## Diseño de la interfaz
 
-Se espera que cada estudiante tenga un código QR que tiene un identificador de ellas como por ejemplo su correo electrónico, al llegar al área de trabajo cada estudiante mostrará su código QR a la webcam de una laptop y esta laptop registrará la asistencia de ella para ese día.
 
-## Recomendaciones
+### Prototipo de baja fidelidad
 
-- Si planeamos usar React podemos usar estos 2 libraries para el manejo de QRs: https://www.npmjs.com/package/react-qr-scanner y https://www.npmjs.com/package/react-qr-svg
-- Usar Firebase para la persistencia de la data.
-- Usar herramientas online para la creación de QRs de prueba (si lo consideran necesario) ej: https://www.the-qrcode-generator.com/
+[Primera iteración](./images/first-ite.png)
+[Segunda iteración I](./images/second-ite.png)
+[Segunda iteración II](.images/second-iter.png)
 
-## ¿Por qué el nombre Organa?
 
-Leia Organa es la general de la resistencia en el universo de Star Wars, nos gusta pensar que está muy pendiente de los intergrantes de su equipo!
+
+### Prototipo de alta fidelidad 
+
+En el siguiente enlace, se puede encontrar el diseño de *Organa*.
+[Figma prototipo](https://www.figma.com/proto/O5AtKvib1waYHbzyH6CwygEt/Organa?node-id=6:514&viewport=-999,64,0.26451224088668823&scaling=scale-down)
+
+### Componentes 
+Después de conocer las instancias que contendría la webapp, se hizó una lista de los componentes necesarios.
+[Componentes general](./images/components-general.png)
+[Lista de componentes](./images/components-list.png)
+[Árbol de componentes](./images/components-tree.png)
